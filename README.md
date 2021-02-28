@@ -24,7 +24,7 @@ Every image and its annotations are inside a `folder_name`, that you can find us
 2. `image_name_seg.png`: with the pixel-wise annotations of objects and instances (e.g. [ADE_train_00016869_seg.png](./dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869_seg.png)). The RGB channels encode the class and instance information. Check out (`utils/utils_ade20k.py`)[utils/utils_ade20k.py] for an example on how to read those.
 3. `image_name_parts_{i}.png`: with the annotation of the parts at level `i` (e.g. [ADE_train_00016869_parts_1.png](dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869_parts_1.png)).
 4. `image_name`: a folder with all the instances in that image, stored as pngs encoding a binary amodal mask (showing occluded objects) (e.g. [ADE_train_00016869](dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869)).
-5. `image_name.json`: a json file containing information about the time the object was annotated, the polygons annotated, annotation of attributes etc. ([ADE_train_00016869.json](dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869.json).
+5. `image_name.json`: a json file containing information about the time the object was annotated, the polygons annotated, annotation of attributes etc. (e.g [ADE_train_00016869.json](dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869.json)).
 
 We provide some [starter code](./notebooks/ade20k_starter.ipynb) to analyze the dataset, basic statistics of the data and links to existing projects using ADE20K.
 
