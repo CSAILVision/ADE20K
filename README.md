@@ -15,7 +15,7 @@ The current version of the dataset contains:
 * Polygon annotations with attributes, annotation time, depth ordering.
 
 ### Explore the dataset
-While you will need to [sign in](http://groups.csail.mit.edu/vision/datasets/ADE20K/request_data/) in order to access the dataset, we provide a small subset in `datasets`, so that you can familiarize with the structure. We also provide an `index_ade20k.pkl` that you can download [here](http://groups.csail.mit.edu/vision/datasets/ADE20K/toolkit/index_ade20k.pkl), to query statistics of the data and the location of the images.
+While you will need to [sign in](http://groups.csail.mit.edu/vision/datasets/ADE20K/request_data/) in order to access the dataset, we provide a small subset in `datasets`, so that you can familiarize with the structure. We also provide an `index_ade20k.pkl` that you can download [here](http://groups.csail.mit.edu/vision/datasets/ADE20K/toolkit/index_ade20k.pkl), to query statistics of the data and the folder where the images are stored.
 
 #### Structure
 Every image and its annotations are inside a `folder_name`, that you can find using `index_ade20k.pkl`. Once you are inside the folder name, for a given image `image_name` (e.g. `ADE_train_00016869`) you will find:
