@@ -1,10 +1,32 @@
 # ADE20K Dataset
 
-<img src="assets/slider.png" style="height: 200px; width: 50%">
-This is the repository for the [ADE20K](https://groups.csail.mit.edu/vision/datasets/ADE20K/) dataset. We provide some [starter code](./notebooks/ade20k_starter.ipynb) to analyze the dataset, basic statistics of the data and links to existing projects using ADE20K.
+<img src="assets/slider.png"  height=400px;>
+
+This is the repository for the [ADE20K Dataset](https://groups.csail.mit.edu/vision/datasets/ADE20K/). We provide some information of the dataset, and [starter code](./notebooks/ade20k_starter.ipynb) to explore the data.
 
 ## Overview
-This dataset is composed of more than 25K images from the SUN and Places databases. Images are fully annotated with objects, spanning over 3K object categories. Many of the images also contain object parts, and parts of parts. We also provide the original annotated polygons, as well as object instances for amodal segmentation.
+ADE20K is composed of more than 27K images from the SUN and Places databases. Images are fully annotated with objects, spanning over 3K object categories. Many of the images also contain object parts, and parts of parts. We also provide the original annotated polygons, as well as object instances for amodal segmentation. Images are also anonymized, blurring faces and license plates.
+
+### Dataset stats
+The current version of the dataset contains:
+* 27,574 images (25,574 for training and 2,000 for testing) spanning 365 different scenes.
+* 707,868 unique objects from 3,688 categories, along with their WordNet definition and hierarchy.
+* 193,238 annotated object parts and parts of parts.
+* Polygon annotations with attributes, annotation time, depth ordering.
+
+### Explore the dataset
+While you will need to [sign in](http://groups.csail.mit.edu/vision/datasets/ADE20K/request_data/) in order to access the dataset, we provide a small subset in `datasets`, so that you can familiarize with the structure. We also provide an `index_ade20k.pkl` that you can download [here](http://groups.csail.mit.edu/vision/datasets/ADE20K/toolkit/index_ade20k.pkl), to query statistics of the data and the location of the images.
+
+#### Structure
+Every image and its annotations are inside a `folder_name`, that you can find using `index_ade20k.pkl`. Once you are inside the folder name, for a given image `image_name` (e.g. `ADE_train_00016869`) you will find:
+
+1. `image_name.jpg`: containing the raw image, with blurred license plates and faces (e.g. [ADE_train_00016869.jpg](./dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869.jpg))
+2. `image_name_seg.png`: with the pixel-wise annotations of objects and instances (e.g. [ADE_train_00016869_seg.png](./dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869_seg.png)). The RGB channels encode the class and instance information. Check out (`utils/utils_ade20k.py`)[utils/utils_ade20k.py] for an example on how to read those.
+3. `image_name_parts_{i}.png`: with the annotation of the parts at level `i` (e.g. [ADE_train_00016869_parts_1.png](dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869_parts_1.png)).
+4. `image_name`: a folder with all the instances in that image, stored as pngs encoding a binary amodal mask (showing occluded objects) (e.g. [ADE_train_00016869](dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869)).
+5. `image_name.json`: a json file containing information about the time the object was annotated, the polygons annotated, annotation of attributes etc. ([ADE_train_00016869.json](dataset/ADE20K_2021_17_01/images/ADE/training/urban/street/ADE_train_00016869.json).
+
+We provide some [starter code](./notebooks/ade20k_starter.ipynb) to analyze the dataset, basic statistics of the data and links to existing projects using ADE20K.
 
 
 ## Download
