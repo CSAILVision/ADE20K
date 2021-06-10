@@ -34,14 +34,14 @@ To download the dataset, register in [this link](http://groups.csail.mit.edu/vis
 
 ## ADE20K related projects
 Here is a list of existing challenges and projects using ADE20K data. Contact us if you would like to include the dataset in a new benchmark.
-* [MIT Scene Parsing Benchmark](https://github.com/CSAILVision/sceneparsing): A semantic segmentation benchmark, using a subset of 250 classes from ADE20K
+* [MIT Scene Parsing Benchmark in Pytorch](https://github.com/CSAILVision/semantic-segmentation-pytorch) A semantic segmentation benchmark with baseline models in PyTorch, using a subset of 150 classes from ADE20K.
 * [Robust Vision Challenge](http://www.robustvision.net/): A challenge to evaluate the robustness of models to multiple datasets and tasks, including semantic and instance segmentation, depth prediction, optical flow, etc.
 
 ## Terms
 The data can be used under the following [Terms of Use](http://groups.csail.mit.edu/vision/datasets/ADE20K/terms).
 
 ## Citation
-If you use this data, please cite the following paper:
+If you use this data, please cite the following papers:
 
 Zhou, B., Zhao, H., Puig, X., Xiao, T., Fidler, S., Barriuso, A., & Torralba, A. (2019). Semantic understanding of scenes through the ade20k dataset. International Journal of Computer Vision, 127(3), 302-321.
 
@@ -58,3 +58,13 @@ Zhou, B., Zhao, H., Puig, X., Xiao, T., Fidler, S., Barriuso, A., & Torralba, A.
 }
 ```
 
+Zhou, B., Zhao, H., Puig, X., Fidler, S., Barriuso, A., & Torralba, A. (2017). Scene Parsing through ADE20K Dataset. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+
+```
+    @inproceedings{zhou2017scene,
+        title={Scene Parsing through ADE20K Dataset},
+        author={Zhou, Bolei and Zhao, Hang and Puig, Xavier and Fidler, Sanja and Barriuso, Adela and Torralba, Antonio},
+        booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+        year={2017}
+    }
+```
