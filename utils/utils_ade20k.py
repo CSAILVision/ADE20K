@@ -24,10 +24,10 @@ def loadAde20K(file):
     ObjectClassMasks = (R/10).astype(np.int32)*256+(G.astype(np.int32));
 
 
-    # TODO: correct
-    Minstances_hat = np.unique(B)
-    Minstances_hat = np.zeros(B.shape)
-    ObjectInstanceMasks = ObjectClassMasks
+    # Obtain the instance mask from the blue channel of the _seg file
+    Minstances_hat = np.unique(B, return_inverse=True)[1]
+    Minstances_hat = np.reshape(Minstances_hat, B.shape)
+    ObjectInstanceMasks = Minstances_hat
 
 
     level = 0
