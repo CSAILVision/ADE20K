@@ -17,6 +17,7 @@ def loadAde20K(file):
     with Image.open(fileseg) as io:
         seg = np.array(io);
 
+    # Obtain the segmentation mask, bult from the RGB channels of the _seg file
     R = seg[:,:,0];
     G = seg[:,:,1];
     B = seg[:,:,2];
