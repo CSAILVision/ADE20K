@@ -101,7 +101,7 @@ def plot_polygon(img_name, info, show_obj=True, show_parts=False):
         all_poly += info['objects']['polygon']
     if show_parts:
         all_objects += info['parts']['class']
-        all_poly += info['objects']['polygon']
+        all_poly += info['parts']['polygon']
 
     img = cv2.imread(img_name)
     thickness = 5
