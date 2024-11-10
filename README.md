@@ -2,7 +2,7 @@
 
 <img src="assets/slider.png"  height=400px;>
 
-This is the repository for the [ADE20K Dataset](http://ade20k.csail.mit.edu/). We provide some information of the dataset, and [starter code](./notebooks/ade20k_starter.ipynb) to explore the data.
+This is the repository for the [ADE20K Dataset](https://ade20k.csail.mit.edu/). We provide some information of the dataset, and [starter code](./notebooks/ade20k_starter.ipynb) to explore the data.
 
 ## Overview
 ADE20K is composed of more than 27K images from the SUN and Places databases. Images are fully annotated with objects, spanning over 3K object categories. Many of the images also contain object parts, and parts of parts. We also provide the original annotated polygons, as well as object instances for amodal segmentation. Images are also anonymized, blurring faces and license plates.
@@ -15,7 +15,7 @@ The current version of the dataset contains:
 * Polygon annotations with attributes, annotation time, depth ordering.
 
 ### Explore the dataset
-While you will need to [sign in](http://ade20k.csail.mit.edu/request_data/) in order to access the dataset, we provide a small subset in `datasets`, so that you can familiarize with the structure. We also provide an `index_ade20k.pkl` that you can download [here](http://ade20k.csail.mit.edu//toolkit/index_ade20k.pkl), to query statistics of the data and the folder where the images are stored.
+While you will need to [sign in](https://ade20k.csail.mit.edu/request_data/) in order to access the dataset, we provide a small subset in `datasets`, so that you can familiarize with the structure. We also provide an `index_ade20k.pkl` that you can download [here](https://ade20k.csail.mit.edu//toolkit/index_ade20k.pkl), to query statistics of the data and the folder where the images are stored.
 
 #### Structure
 Every image and its annotations are inside a `folder_name`, that you can find using `index_ade20k.pkl`. Once you are inside the folder name, for a given image `image_name` (e.g. `ADE_train_00016869`) you will find:
@@ -30,7 +30,7 @@ We provide some [starter code](./notebooks/ade20k_starter.ipynb) to analyze the 
 
 
 ## Download
-To download the dataset, register in [this link](http://ade20k.csail.mit.edu/request_data/). Once you are approved you will be able to download the data, following the [Terms of Use](http://ade20k.csail.mit.edu/terms).
+To download the dataset, register in [this link](https://ade20k.csail.mit.edu/request_data/). Once you are approved you will be able to download the data, following the [Terms of Use](https://ade20k.csail.mit.edu/terms).
 
 ## ADE20K related projects
 Here is a list of existing challenges and projects using ADE20K data. Contact us if you would like to include the dataset in a new benchmark.
@@ -38,7 +38,7 @@ Here is a list of existing challenges and projects using ADE20K data. Contact us
 * [Robust Vision Challenge](http://www.robustvision.net/): A challenge to evaluate the robustness of models to multiple datasets and tasks, including semantic and instance segmentation, depth prediction, optical flow, etc.
 
 ## Terms
-The data can be used under the following [Terms of Use](http://ade20k.csail.mit.edu/terms).
+The data can be used under the following [Terms of Use](https://ade20k.csail.mit.edu/terms).
 
 ## Citation
 If you use this data, please cite the following papers:
